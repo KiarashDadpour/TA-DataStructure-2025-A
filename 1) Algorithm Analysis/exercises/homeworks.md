@@ -7,7 +7,7 @@
 #### 2) Quick Sort Algorithm
 - a) Implement the Quick Sort algorithm in Python.
 - b) Analyze the time complexity of Quick Sort.
-#### 3) Heap Sort Algorithm
+#### 3) Heap Sort Algorithm 
 - a) Implement the Heap Sort algorithm in Python.
 - b) Analyze the time complexity of Heap Sort.
 #### 4) Radix Sort Algorithm
