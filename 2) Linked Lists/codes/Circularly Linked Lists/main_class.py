@@ -10,11 +10,13 @@ class CircularLinkedList:
         if self.is_empty():
             return "Empty List!!!"
         current = self.head
-        while True:
-            print(current.get_info(), end="  ")
-            current = current.next
-            if current == self.head:
-                break
+        while current:
+            print(current.get_info(),end="  ")
+            if current.next == self.head:
+                return
+            current = current.next 
+        print()
+            
 
     def search_node(self, value):
         if self.is_empty():
@@ -26,7 +28,7 @@ class CircularLinkedList:
             current = current.next
             if current == self.head:
                 break
-        return None\
+        return None
 
     def insert_head(self, new: Node):
         if self.is_empty():
@@ -70,5 +72,4 @@ class CircularLinkedList:
             self.head = self.head.next
             self.tail.next = self.head.get_next()
             current.next = None
-
-
+            return
