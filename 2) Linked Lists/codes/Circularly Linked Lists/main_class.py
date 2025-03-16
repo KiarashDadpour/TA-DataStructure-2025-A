@@ -37,3 +37,15 @@ class CircularLinkedList:
             new.next = self.head
             self.head = new
             self.tail.next = self.head
+
+    def insert_tail(self, new: Node):
+        if self.is_empty():
+            self.head = new
+            self.tail = new
+            new.next = self.head  
+        else:
+            self.tail.next = new
+            self.tail = new
+            self.tail.next = self.head
+
+
