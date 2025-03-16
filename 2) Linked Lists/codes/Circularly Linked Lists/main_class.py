@@ -73,3 +73,4 @@ class CircularLinkedList:
             self.tail.next = self.head.get_next()
             current.next = None
             return
+
