@@ -26,4 +26,14 @@ class CircularLinkedList:
             current = current.next
             if current == self.head:
                 break
-        return None
+        return None\
+
+    def insert_head(self, new: Node):
+        if self.is_empty():
+            self.head = new
+            self.tail = new
+            new.next = self.head  
+        else:
+            new.next = self.head
+            self.head = new
+            self.tail.next = self.head
