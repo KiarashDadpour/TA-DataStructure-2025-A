@@ -15,3 +15,15 @@ class CircularLinkedList:
             current = current.next
             if current == self.head:
                 break
+
+    def search_node(self, value):
+        if self.is_empty():
+            return "Empty List!!!"
+        current = self.head
+        while True:
+            if current.info == value:
+                return current
+            current = current.next
+            if current == self.head:
+                break
+        return None
