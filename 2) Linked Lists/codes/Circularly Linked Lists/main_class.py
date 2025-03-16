@@ -48,4 +48,27 @@ class CircularLinkedList:
             self.tail = new
             self.tail.next = self.head
 
+    def insert_after_node(self, new: Node, after: Node):
+        if self.is_empty():
+            self.head = new
+        else:
+            current = self.head
+            while current:
+                if current.info == after.info:
+                    new.next = current.next
+                    current.next = new
+                    return True
+                current = current.next  
+
+    def delete_head(self):
+        if self.is_empty():
+            return "Empty List!!!"
+        elif self.head == self.tail: 
+            self.head = self.tail = None
+        else:
+            current = self.head 
+            self.head = self.head.next
+            self.tail.next = self.head.get_next()
+            current.next = None
+
 
