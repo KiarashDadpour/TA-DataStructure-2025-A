@@ -16,6 +16,7 @@ class LinkedList:
         while current:
             print(current.get_info(),end="  ")
             current = current.next
+        print()
         
     def search_node(self, value):
         if self.is_empty():
@@ -28,39 +29,48 @@ class LinkedList:
                 return current
             else:
                 current = current.next
-        return current
+        return current 
 
     def insert_head(self, new: Node):
         if self.head is None:
             self.head = new
         else:
             new.next = self.head
-            self.head = new
+            self.head = new  
 
     def insert_tail(self, new: Node):
         if self.head is None:
             self.head = new
         else:
             self.tail.next = new
-            self.tail = new 
+            self.tail = new  
 
     def insert_after_node(self, new: Node, after: Node):
         if self.is_empty():
-            self.head = new
+            self.head = new 
         else:
-            current = self.head
+            current = self.head 
             while current:
                 if current.info == after.info:
                     new.next = current.next
                     current.next = new
-                    return True
-                current = current.next 
+                    return 
+                current = current.next  
 
     def delete_head(self):
         if self.is_empty():
             return "Empty List!!!"
+        elif self.head == self.tail:  
+            self.head = self.tail = None 
         else:
             current = self.head 
             self.head = self.head.get_next()
             current.next = None 
+
+    def deletd_tail(self):
+        pass # Homework 
+
+    def delete_after(after: Node):
+        pass # Homework   
+
 
